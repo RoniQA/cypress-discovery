@@ -15,10 +15,26 @@
             "deliver_method": "Moto",
             "driver_license": "cnh-digital.jpg"
     },
-    "cpf_invalido": {
+    "cpf_inv": {
         "name": "Amanda Teixeira",
             "cpf": "123321456AA",
             "email": "amanda@hotmail.com",
+            "whatsapp": "85999999999",
+            "address": {
+                "postal_code": "60862460",
+                "street":"Rua Regina de Fátima",
+                "number": "1234",
+                "details": "Casa A",
+                "district": "Passaré",
+                "city_state": "Fortaleza/CE"
+            },
+            "deliver_method": "Moto",
+            "driver_license": "cnh-digital.jpg"
+    },
+    "email_inv": {
+        "name": "Ronierison Costa",
+            "cpf": "12332145665",
+            "email": "roninqa.com.br",
             "whatsapp": "85999999999",
             "address": {
                 "postal_code": "60862460",

@@ -22,10 +22,20 @@ describe('Signup', () => {
     it('Incorrect document', function() {
 
         signup.go()
-        signup.fillform(this.deliver.cpf_invalido)
+        signup.fillform(this.deliver.cpf_inv)
         signup.submit()
 
         cy.get('.alert-error').should('have.text', 'Oops! CPF inválido')
+
+    })
+
+    it('Incorrect email', function() {
+
+        signup.go()
+        signup.fillform(this.deliver.email_inv)
+        signup.submit()
+
+        cy.get('.alert-error').should('have.text', 'Oops! Email com formato inválido.')
 
     })
 })
