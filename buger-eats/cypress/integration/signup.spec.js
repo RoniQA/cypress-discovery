@@ -33,7 +33,7 @@ describe('Signup', () => {
         signup.fillform(deliver)
         signup.submit()
 
-        cy.get('.alert-error').should('have.text', 'Oops! CPF inválido')
+        signup.alertMessageShouldbe('Oops! CPF inválido')
 
     })
 
@@ -46,8 +46,18 @@ describe('Signup', () => {
         signup.go()
         signup.fillform(deliver)
         signup.submit()
+        signup.alertMessageShouldbe('Oops! Email com formato inválido.')
+    })
 
-        cy.get('.alert-error').should('have.text', 'Oops! Email com formato inválido.')
-
+    it('Required fields', function() {
+        signup.go()
+        signup.submit()
+        signup.alertMessageShouldbe('É necessário informar o nome')
+        signup.alertMessageShouldbe('É necessário informar o CPF')
+        signup.alertMessageShouldbe('É necessário informar o email')
+        signup.alertMessageShouldbe('É necessário informar o CEP')
+        signup.alertMessageShouldbe('É necessário informar o número do endereço')
+        signup.alertMessageShouldbe('Selecione o método de entrega')
+        signup.alertMessageShouldbe('Adicione uma foto da sua CNH')
     })
 })
